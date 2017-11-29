@@ -1,30 +1,16 @@
 package com.company;
 
-import static com.company.MonteCarlo.radius;
-
 /**
- * Created by Veronica Lang on 11/28/2017.
+ * Created by Veronica Lang on 11/29/2017.
  */
 public class Tester {
-    public static void main(String[] args) {
-        MonteCarlo mcObj = new MonteCarlo();
-        mcObj.MonteCarlo(5,3,2);
-        double a;
-        double b;
-        int cirCount = 0;
-        int sqrCount = 0;
-        for (int i = 0; i <=100; i++){
-            a = mcObj.nextRainDrop_x();
-            b = mcObj.nextRainDrop_y();
-            if (mcObj.insideCircle(a,b) == true){
-                cirCount++;
-            }
-            sqrCount++;
-            double shouldBeNearPi = (cirCount * Math.pow(a, 2))
-                    /(sqrCount * Math.pow(radius, 2));
-            //not sure what side was so i just put a
-            System.out.println(shouldBeNearPi);
-        }
+    public static void main(String arg[]) {
+        cat te1 = new cat();
+        String t1 = te1.cat(68, 108);
+        System.out.println(t1);
 
+        cat te2 = new cat();
+        String t2 = te2.cat(35, 59);
+        System.out.println(t2);
     }
 }
